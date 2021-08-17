@@ -1,8 +1,11 @@
+import React from 'react'
 import './App.css';
-import data from './data';
-
+import {BrowserRouter, Route} from 'react-router-dom'
+import {HomeScreen} from './screens/HomeScreen';
+import {ProductScreen} from './screens/ProductScreen';
 function App() {
   return (
+    <BrowserRouter>
     <div className="grid-container">
       <header className="row">
         <div>
@@ -13,44 +16,16 @@ function App() {
           <a href="/sign-in">Sign-in</a>
         </div>
       </header>
+
       <main>
-        <div className="row center">
-        {data.products.map( (product) => (
-            <div key={product.key} className="card">
-            <a href="/product">
-              
-              <img className="medium" src={product.image} alt="products"/>
-                </a>
-              <div className="card-body">
-                <a href="/product">
-                  <h2>{product.name}</h2>
 
-                </a>
-                <div className="rating">
-                  <span>
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
-
-                  </span>
-                </div>
-                <div className="price">
-                  {product.currency}
-                  {product.price}
-                </div>
-              </div>
-            </div>
-           
- 
-          ))
-         }
-            
+        <Route path="/product/:id" component={ProductScreen} ></Route>
+        <Route path="/" component={HomeScreen} exact ></Route>
+        
                      
             
             
-        </div>
+        
     </main>
                   <footer className="row center">
                     <div className="footer">
@@ -58,6 +33,7 @@ function App() {
                     </div>
                   </footer>
                 </div>
+                </BrowserRouter>
                 );
 }
 

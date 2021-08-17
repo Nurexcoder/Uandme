@@ -48,9 +48,7 @@ a{
   text-decoration: none;
   padding: 0 10px;
 }
-:hover{
-  color: #ff8000;
-}
+
 /* Header */
 header a{
   color: #fff;
@@ -93,8 +91,11 @@ img.medium{
   font-size: 2rem;
 }
 .rating span{
-  color: #f0c040 !important;
+  color: #f0c040 ;
   margin: 0.1rem;
+}
+.rating .num-review{
+  color: #404040;
 }
 .card img{
   width: 680px;
