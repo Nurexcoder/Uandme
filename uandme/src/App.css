@@ -15,7 +15,7 @@ html{
   height: 100%;
 }
 h1{
-  font-size: 1rem;
+  font-size: 3rem;
   padding: 13px 0;
 
 }
@@ -48,7 +48,34 @@ a{
   text-decoration: none;
   padding: 0 10px;
 }
+ul{
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+li{
+  margin-top: 1rem;
+}
+button{
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem #a4a4a4;
+  font-family:  Helvetica,Arial, sans-serif;
+  -webkit-font-smoothig: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f8f8;
+  cursor: pointer;
 
+}
+button:hover{
+  border: 0.1rem #404040 solid;
+}
+button.primary{
+  background-color: #f0c040;
+}
+button.block{
+  width: 100%;
+}
 /* Header */
 header a{
   color: #fff;
@@ -67,6 +94,15 @@ header a{
 .row.center{
   justify-content: center;
 }
+.row.top{
+  align-items: flex-start;
+}
+.col-1{
+  flex: 1 1 25rem;
+}
+.col-2{
+  flex: 2 1 50rem;
+}
 img{
   border-radius: 0.5rem;
 }
@@ -74,6 +110,9 @@ img.medium{
   max-width: 29rem;
   width: 100%;
 
+}
+img.large{
+  width: 100%;
 }
 .card{
   border: 0.1rem #c0c0c0 solid;
@@ -100,4 +139,10 @@ img.medium{
 .card img{
   width: 680px;
   height: 250px;
+}
+.success{
+  color: #20a020;
+}
+.error{
+  color: #a02020;
 }
